@@ -56,6 +56,10 @@ class ApplicationController < Sinatra::Base
     def logged_in?
       !!session[:user_id]
     end
+
+    def all_tweets
+      Tweet.all
+    end
   end
 
 end
